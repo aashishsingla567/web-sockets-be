@@ -10,12 +10,12 @@ import config from "./config";
 import routes from "./routes/v0";
 import httpStatus from "http-status";
 
-const app = express();
-const server = http.createServer(app);
-
 export const init = async () => {
+  const app = express();
+  const server = http.createServer(app);
   // cors
   app.use(cors(config.cors));
+
   const io = new SocketServer(server, {
     cors: config.cors,
   });
@@ -52,11 +52,12 @@ export const init = async () => {
     res.status(httpStatus.NOT_FOUND).send("Not found");
   });
 
-  app.listen(config.port, () => {
-    console.log("Server is listening on port 3000");
-  });
+  // ! THIS IS NOT NEEDED AS WE ARE USING SOCKET.IO
+  // app.listen(config.port, () => {
+  //   console.log("Server is listening on port 3000");
+  // });
 
   server.listen(config.port, () => {
-    console.log("Socket server is listening on port 3000");
+    console.log("Server is listening on port 3000");
   });
 };
