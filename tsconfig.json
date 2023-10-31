@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    // don't allow any and unknown types
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noFallthroughCasesInSwitch": true,
+    // -----------------------------------
+    // Allow optional chaining
+    
+    // -----------------------------------
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "types": [
+      "bun-types" // add Bun global
+    ]
+  }
+}
