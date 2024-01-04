@@ -7,6 +7,7 @@
     "dev": "bun --hot index.ts"
   },
   "devDependencies": {
+    "@types/passport-jwt": "^3.0.13",
     "bun-types": "latest"
   },
   "peerDependencies": {
@@ -19,7 +20,12 @@
     "express": "^4.18.2",
     "firebase-admin": "^11.11.0",
     "http-status": "^1.7.3",
+    "jsonwebtoken": "^9.0.2",
+    "jwt": "^0.2.0",
+    "moment": "^2.29.4",
     "mongoose": "^7.6.3",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
     "pm2": "^5.3.0",
     "socket.io": "^4.7.2",
     "web-push": "^3.6.6",
